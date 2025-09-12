@@ -30,43 +30,12 @@
             background: linear-gradient(90deg, #3b82f6, #8b5cf6);
             border-radius: 2px;
         }
-        .timeline-item {
-            position: relative;
-            padding-left: 2rem;
-        }
-        .timeline-item:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 2px;
-            height: 100%;
-            background: #3b82f6;
-        }
-        .timeline-dot {
-            position: absolute;
-            left: -8px;
-            top: 0;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: #3b82f6;
-        }
-        .skill-pill {
-            transition: all 0.3s ease;
-        }
-        .skill-pill:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 0;
-        }
+        .timeline-item { position: relative; padding-left: 2rem; }
+        .timeline-item:before { content: ''; position: absolute; left: 0; top: 0; width: 2px; height: 100%; background: #3b82f6; }
+        .timeline-dot { position: absolute; left: -8px; top: 0; width: 16px; height: 16px; border-radius: 50%; background: #3b82f6; }
+        .skill-pill { transition: all 0.3s ease; }
+        .skill-pill:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        #particles-js { position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
@@ -148,97 +117,62 @@
     <section id="skills" class="py-16 bg-gray-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold mb-12 section-title" data-aos="fade-up">Core Competencies</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Skill cards ... (unchanged) -->
-                <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center mb-4">
-                        <div class="p-3 rounded-lg bg-blue-100 text-blue-600 mr-4">
-                            <i data-feather="bar-chart-2"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold">Business Intelligence & Visualization</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Tableau</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Power BI</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Excel</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Data Studio</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Seaborn</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-center mb-4">
-                        <div class="p-3 rounded-lg bg-purple-100 text-purple-600 mr-4">
-                            <i data-feather="cpu"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold">Data & Statistical Analysis</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Python</span>
-                        <span class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">R</span>
-                        <span class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Advanced Excel</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="300">
-                    <div class="flex items-center mb-4">
-                        <div class="p-3 rounded-lg bg-green-100 text-green-600 mr-4">
-                            <i data-feather="database"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold">Data Management</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">SQL</span>
-                        <span class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">NoSQL</span>
-                        <span class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Amazon Redshift</span>
-                        <span class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Google Big Query</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center mb-4">
-                        <div class="p-3 rounded-lg bg-yellow-100 text-yellow-600 mr-4">
-                            <i data-feather="activity"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold">Predictive Modelling & ML</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Scikit-learn</span>
-                        <span class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">TensorFlow</span>
-                        <span class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Pandas</span>
-                        <span class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">NumPy</span>
-                        <span class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Keras</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-center mb-4">
-                        <div class="p-3 rounded-lg bg-red-100 text-red-600 mr-4">
-                            <i data-feather="box"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold">Simulation & Digital Twins</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-pill bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">MATLAB</span>
-                        <span class="skill-pill bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Simulink</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="300">
-                    <div class="flex items-center mb-4">
-                        <div class="p-3 rounded-lg bg-indigo-100 text-indigo-600 mr-4">
-                            <i data-feather="clipboard"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold">Project Management</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-pill bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Jira</span>
-                        <span class="skill-pill bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Trello</span>
-                        <span class="skill-pill bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Agile</span>
-                        <span class="skill-pill bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Miro</span>
-                    </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- (skills unchanged) -->
+            <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center mb-4"><div class="p-3 rounded-lg bg-blue-100 text-blue-600 mr-4"><i data-feather="bar-chart-2"></i></div><h3 class="text-xl font-semibold">Business Intelligence & Visualization</h3></div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Tableau</span>
+                    <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Power BI</span>
+                    <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Excel</span>
+                    <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Data Studio</span>
+                    <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Seaborn</span>
                 </div>
             </div>
+            <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center mb-4"><div class="p-3 rounded-lg bg-purple-100 text-purple-600 mr-4"><i data-feather="cpu"></i></div><h3 class="text-xl font-semibold">Data & Statistical Analysis</h3></div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Python</span>
+                    <span class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">R</span>
+                    <span class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Advanced Excel</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center mb-4"><div class="p-3 rounded-lg bg-green-100 text-green-600 mr-4"><i data-feather="database"></i></div><h3 class="text-xl font-semibold">Data Management</h3></div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">SQL</span>
+                    <span class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">NoSQL</span>
+                    <span class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Amazon Redshift</span>
+                    <span class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Google Big Query</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center mb-4"><div class="p-3 rounded-lg bg-yellow-100 text-yellow-600 mr-4"><i data-feather="activity"></i></div><h3 class="text-xl font-semibold">Predictive Modelling & ML</h3></div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Scikit-learn</span>
+                    <span class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">TensorFlow</span>
+                    <span class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Pandas</span>
+                    <span class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">NumPy</span>
+                    <span class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Keras</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center mb-4"><div class="p-3 rounded-lg bg-red-100 text-red-600 mr-4"><i data-feather="box"></i></div><h3 class="text-xl font-semibold">Simulation & Digital Twins</h3></div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-pill bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">MATLAB</span>
+                    <span class="skill-pill bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Simulink</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center mb-4"><div class="p-3 rounded-lg bg-indigo-100 text-indigo-600 mr-4"><i data-feather="clipboard"></i></div><h3 class="text-xl font-semibold">Project Management</h3></div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-pill bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Jira</span>
+                    <span class="skill-pill bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Trello</span>
+                    <span class="skill-pill bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Agile</span>
+                    <span class="skill-pill bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Miro</span>
+                </div>
+            </div>
+        </div>
         </div>
     </section>
 
@@ -246,9 +180,7 @@
     <section id="experience" class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold mb-12 section-title" data-aos="fade-up">Professional Experience</h2>
-            <!-- Experience cards (unchanged) -->
             <div class="space-y-8">
-                <!-- Experience 1 -->
                 <div class="timeline-item" data-aos="fade-up">
                     <div class="timeline-dot"></div>
                     <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
@@ -264,7 +196,6 @@
                     </div>
                 </div>
 
-                <!-- Experience 2 -->
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="timeline-dot"></div>
                     <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
@@ -283,7 +214,6 @@
                     </div>
                 </div>
 
-                <!-- Experience 3 -->
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="timeline-dot"></div>
                     <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
@@ -307,13 +237,10 @@
     <section id="education" class="py-16 bg-gray-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold mb-12 section-title" data-aos="fade-up">Education</h2>
-            <!-- Education cards (unchanged) -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
                 <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up">
                     <div class="flex items-center mb-4">
-                        <div class="p-3 rounded-lg bg-blue-100 text-blue-600 mr-4">
-                            <i data-feather="award"></i>
-                        </div>
+                        <div class="p-3 rounded-lg bg-blue-100 text-blue-600 mr-4"><i data-feather="award"></i></div>
                         <div>
                             <h3 class="text-xl font-semibold">PhD Transport Systems</h3>
                             <p class="text-gray-600">Cranfield University</p>
@@ -323,9 +250,7 @@
                 </div>
                 <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-center mb-4">
-                        <div class="p-3 rounded-lg bg-purple-100 text-purple-600 mr-4">
-                            <i data-feather="award"></i>
-                        </div>
+                        <div class="p-3 rounded-lg bg-purple-100 text-purple-600 mr-4"><i data-feather="award"></i></div>
                         <div>
                             <h3 class="text-xl font-semibold">MSc Data Analytics</h3>
                             <p class="text-gray-600">University of Portsmouth</p>
@@ -335,9 +260,7 @@
                 </div>
                 <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex items-center mb-4">
-                        <div class="p-3 rounded-lg bg-green-100 text-green-600 mr-4">
-                            <i data-feather="award"></i>
-                        </div>
+                        <div class="p-3 rounded-lg bg-green-100 text-green-600 mr-4"><i data-feather="award"></i></div>
                         <div>
                             <h3 class="text-xl font-semibold">MBA Management Information Systems</h3>
                             <p class="text-gray-600">Kwame Nkrumah University Of Science And Technology</p>
@@ -347,9 +270,7 @@
                 </div>
                 <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="300">
                     <div class="flex items-center mb-4">
-                        <div class="p-3 rounded-lg bg-yellow-100 text-yellow-600 mr-4">
-                            <i data-feather="award"></i>
-                        </div>
+                        <div class="p-3 rounded-lg bg-yellow-100 text-yellow-600 mr-4"><i data-feather="award"></i></div>
                         <div>
                             <h3 class="text-xl font-semibold">BA Sociology and Social Work</h3>
                             <p class="text-gray-600">Kwame Nkrumah University Of Science And Technology</p>
@@ -368,9 +289,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="bg-gray-50 rounded-xl p-6 shadow-sm" data-aos="fade-up">
                     <div class="flex items-start">
-                        <div class="p-3 rounded-lg bg-blue-100 text-blue-600 mr-4">
-                            <i data-feather="file-text"></i>
-                        </div>
+                        <div class="p-3 rounded-lg bg-blue-100 text-blue-600 mr-4"><i data-feather="file-text"></i></div>
                         <div>
                             <h3 class="text-xl font-semibold mb-1">Business Intelligence Analyst</h3>
                             <p class="text-gray-600">September 2020</p>
@@ -379,9 +298,7 @@
                 </div>
                 <div class="bg-gray-50 rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-start">
-                        <div class="p-3 rounded-lg bg-purple-100 text-purple-600 mr-4">
-                            <i data-feather="file-text"></i>
-                        </div>
+                        <div class="p-3 rounded-lg bg-purple-100 text-purple-600 mr-4"><i data-feather="file-text"></i></div>
                         <div>
                             <h3 class="text-xl font-semibold mb-1">Google Cloud Platform Big Data and Machine Learning Fundamentals</h3>
                             <p class="text-gray-600">December 2020</p>
@@ -390,9 +307,7 @@
                 </div>
                 <div class="bg-gray-50 rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex items-start">
-                        <div class="p-3 rounded-lg bg-green-100 text-green-600 mr-4">
-                            <i data-feather="file-text"></i>
-                        </div>
+                        <div class="p-3 rounded-lg bg-green-100 text-green-600 mr-4"><i data-feather="file-text"></i></div>
                         <div>
                             <h3 class="text-xl font-semibold mb-1">GDPR Data Protection Officer</h3>
                             <p class="text-gray-600">June 2023</p>
@@ -410,9 +325,7 @@
             <div class="space-y-6">
                 <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up">
                     <div class="flex items-start">
-                        <div class="p-3 rounded-lg bg-blue-100 text-blue-600 mr-4">
-                            <i data-feather="book"></i>
-                        </div>
+                        <div class="p-3 rounded-lg bg-blue-100 text-blue-600 mr-4"><i data-feather="book"></i></div>
                         <div>
                             <h3 class="text-xl font-semibold mb-2">Platform health management for aircraft maintenance – A review</h3>
                             <a href="https://journals.sagepub.com/doi/pdf/10.1177/09544100231219736" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline flex items-center">
@@ -425,9 +338,7 @@
 
                 <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-start">
-                        <div class="p-3 rounded-lg bg-purple-100 text-purple-600 mr-4">
-                            <i data-feather="book"></i>
-                        </div>
+                        <div class="p-3 rounded-lg bg-purple-100 text-purple-600 mr-4"><i data-feather="book"></i></div>
                         <div>
                             <h3 class="text-xl font-semibold mb-2">A Platform View of Aircraft Data Simulation and Analysis</h3>
                             <a href="https://www.preprints.org/manuscript/202503.1945/v1" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline flex items-center">
@@ -450,27 +361,21 @@
                     <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
                     <div class="space-y-6">
                         <div class="flex items-start">
-                            <div class="p-3 rounded-lg bg-white bg-opacity-20 mr-4">
-                                <i data-feather="mail"></i>
-                            </div>
+                            <div class="p-3 rounded-lg bg-white bg-opacity-20 mr-4"><i data-feather="mail"></i></div>
                             <div>
                                 <h4 class="font-medium">Email</h4>
                                 <a href="mailto:andrews.kwakye@cranfield.ac.uk" class="hover:underline">andrews.kwakye@cranfield.ac.uk</a>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="p-3 rounded-lg bg-white bg-opacity-20 mr-4">
-                                <i data-feather="phone"></i>
-                            </div>
+                            <div class="p-3 rounded-lg bg-white bg-opacity-20 mr-4"><i data-feather="phone"></i></div>
                             <div>
                                 <h4 class="font-medium">Phone</h4>
                                 <a href="tel:+447444525514" class="hover:underline">+44 7444 525514</a>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="p-3 rounded-lg bg-white bg-opacity-20 mr-4">
-                                <i data-feather="map-pin"></i>
-                            </div>
+                            <div class="p-3 rounded-lg bg-white bg-opacity-20 mr-4"><i data-feather="map-pin"></i></div>
                             <div>
                                 <h4 class="font-medium">Location</h4>
                                 <p>United Kingdom</p>
@@ -481,14 +386,17 @@
                     <div class="mt-8">
                         <h4 class="font-medium mb-4">Connect with me</h4>
                         <div class="flex space-x-4">
-                            <a href="#" class="p-3 rounded-lg bg-white bg-opacity-20 hover:bg-opacity-30 transition">
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/in/andrews-darfour-kwakye-747b85113/" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg bg-white bg-opacity-20 hover:bg-opacity-30 transition" aria-label="LinkedIn">
                                 <i data-feather="linkedin"></i>
                             </a>
-                            <a href="#" class="p-3 rounded-lg bg-white bg-opacity-20 hover:bg-opacity-30 transition">
+                            <!-- GitHub -->
+                            <a href="https://github.com/up939271" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg bg-white bg-opacity-20 hover:bg-opacity-30 transition" aria-label="GitHub">
                                 <i data-feather="github"></i>
                             </a>
-                            <a href="#" class="p-3 rounded-lg bg-white bg-opacity-20 hover:bg-opacity-30 transition">
-                                <i data-feather="twitter"></i>
+                            <!-- Tableau Public (using a chart icon) -->
+                            <a href="https://public.tableau.com/app/profile/andrews.darfour.kwakye/vizzes" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg bg-white bg-opacity-20 hover:bg-opacity-30 transition" aria-label="Tableau Public">
+                                <i data-feather="pie-chart"></i>
                             </a>
                         </div>
                     </div>
@@ -529,40 +437,23 @@
 
     <script>
         // Initialize AOS animation
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
+        AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
 
         // Mobile menu toggle
         document.getElementById('menu-toggle').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
-            
-            // Change icon based on menu state
-            if (menu.classList.contains('hidden')) {
-                feather.replace();
-            } else {
-                feather.replace();
-            }
+            feather.replace();
         });
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-                
                 if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
+                    window.scrollTo({ top: targetElement.offsetTop - 80, behavior: 'smooth' });
                     const mobileMenu = document.getElementById('mobile-menu');
                     if (!mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
