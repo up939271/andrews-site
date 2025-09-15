@@ -3,92 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrews Darfour Kwakye | Data Scientist</title>
+    <title>Andrews Darfour Kwakye | Data Scientist & Researcher</title>
+    <meta name="description" content="Data Scientist and Researcher with expertise in analytics, data engineering, and machine learning. Transforming complex data into actionable insights.">
+    <meta property="og:title" content="Andrews Darfour Kwakye | Data Scientist">
+    <meta property="og:description" content="Data Scientist and Researcher with expertise in analytics, data engineering, and machine learning.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://andrewskwakye.com">
+    <meta property="og:image" content="https://andrewskwakye.com/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@andrewskwakye">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #7c3aed;
+            --text-primary: #1f2937;
+            --text-secondary: #4b5563;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --bg-tertiary: #f3f4f6;
+            --border-color: #e5e7eb;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .dark {
+            --primary: #3b82f6;
+            --secondary: #8b5cf6;
+            --text-primary: #f9fafb;
+            --text-secondary: #d1d5db;
+            --bg-primary: #111827;
+            --bg-secondary: #1f2937;
+            --bg-tertiary: #374151;
+            --border-color: #4b5563;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
         .gradient-text {
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
+
+        .gradient-bg {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
         .section-title {
             position: relative;
             display: inline-block;
+            padding-bottom: 0.5rem;
         }
+
         .section-title:after {
             content: '';
             position: absolute;
-            bottom: -8px;
+            bottom: 0;
             left: 0;
-            width: 100%;
+            width: 60%;
             height: 4px;
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
             border-radius: 2px;
         }
-        .timeline-item { position: relative; padding-left: 2rem; }
-        .timeline-item:before { content: ''; position: absolute; left: 0; top: 0; width: 2px; height: 100%; background: #3b82f6; }
-        .timeline-dot { position: absolute; left: -8px; top: 0; width: 16px; height: 16px; border-radius: 50%; background: #3b82f6; }
-        .skill-pill { transition: all 0.3s ease; }
-        .skill-pill:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        #particles-js { position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0; }
+
+        .timeline-item { 
+            position: relative; 
+            padding-left: 2rem; 
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item:before { 
+            content: ''; 
+            position: absolute; 
+            left: 0; 
+            top: 0; 
+            width: 2px; 
+            height: 100%; 
+            background: linear-gradient(to bottom, var(--primary), var(--secondary)); 
+        }
+
+        .timeline-dot { 
+            position: absolute; 
+            left: -6px; 
+            top: 0; 
+            width: 12px; 
+            height: 12px; 
+            border-radius: 50%; 
+            background: var(--primary);
+            box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary) 20%, transparent);
+        }
+
+        .skill-pill { 
+            transition: all 0.3s ease; 
+        }
+
+        .skill-pill:hover { 
+            transform: translateY(-2px); 
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover:after,
+        .nav-link.active:after {
+            width: 100%;
+        }
+
+        .hero-pattern {
+            background-color: color-mix(in srgb, var(--primary) 5%, transparent);
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--primary) 30%, transparent), transparent);
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        input, textarea {
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 20%, transparent);
+        }
+
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(8px);
+            background-color: color-mix(in srgb, var(--bg-primary) 80%, transparent);
+            z-index: 50;
+        }
+
+        .mobile-menu {
+            backdrop-filter: blur(8px);
+            background-color: color-mix(in srgb, var(--bg-primary) 80%, transparent);
+        }
+
+        .theme-toggle {
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: rotate(30deg);
+        }
+
+        /* Scroll margin for section anchors */
+        section {
+            scroll-margin-top: 6rem;
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-800">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white shadow-sm z-50">
+    <nav class="sticky-nav shadow-sm border-b border-color">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+            <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center">
                     <span class="text-xl font-bold gradient-text">Andrews Darfour Kwakye</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition">About</a>
-                    <a href="#experience" class="text-gray-700 hover:text-blue-600 transition">Experience</a>
-                    <a href="#education" class="text-gray-700 hover:text-blue-600 transition">Education</a>
-                    <a href="#skills" class="text-gray-700 hover:text-blue-600 transition">Skills</a>
-                    <a href="#publications" class="text-gray-700 hover:text-blue-600 transition">Publications</a>
-                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                    <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition nav-link">About</a>
+                    <a href="#experience" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition nav-link">Experience</a>
+                    <a href="#education" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition nav-link">Education</a>
+                    <a href="#skills" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition nav-link">Skills</a>
+                    <a href="#publications" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition nav-link">Publications</a>
+                    <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition nav-link">Contact</a>
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 theme-toggle">
+                        <i data-feather="moon" class="hidden dark:block"></i>
+                        <i data-feather="sun" class="dark:hidden"></i>
+                    </button>
                 </div>
-                <div class="md:hidden flex items-center">
-                    <button id="menu-toggle" class="text-gray-700">
+                <div class="md:hidden flex items-center space-x-4">
+                    <button id="theme-toggle-mobile" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 theme-toggle">
+                        <i data-feather="moon" class="hidden dark:block"></i>
+                        <i data-feather="sun" class="dark:hidden"></i>
+                    </button>
+                    <button id="menu-toggle" class="text-gray-700 dark:text-gray-300">
                         <i data-feather="menu"></i>
                     </button>
                 </div>
             </div>
         </div>
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
-            <a href="#about" class="block py-2 text-gray-700 hover:text-blue-600 transition">About</a>
-            <a href="#experience" class="block py-2 text-gray-700 hover:text-blue-600 transition">Experience</a>
-            <a href="#education" class="block py-2 text-gray-700 hover:text-blue-600 transition">Education</a>
-            <a href="#skills" class="block py-2 text-gray-700 hover:text-blue-600 transition">Skills</a>
-            <a href="#publications" class="block py-2 text-gray-700 hover:text-blue-600 transition">Publications</a>
-            <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600 transition">Contact</a>
+        <div id="mobile-menu" class="hidden mobile-menu py-2 px-4 shadow-lg border-t border-color">
+            <a href="#about" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">About</a>
+            <a href="#experience" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Experience</a>
+            <a href="#education" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Education</a>
+            <a href="#skills" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Skills</a>
+            <a href="#publications" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Publications</a>
+            <a href="#contact" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Contact</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-r from-blue-50 to-purple-50">
+    <header class="relative pt-24 pb-16 md:pt-32 md:pb-24 hero-pattern">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-50/30 to-purple-50/30 dark:from-blue-900/10 dark:to-purple-900/10"></div>
+        </div>
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="md:flex items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
                     <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span class="gradient-text">Andrews Darfour Kwakye</span></h1>
-                    <h2 class="text-2xl md:text-3xl text-gray-700 mb-6">Data Scientist & Researcher</h2>
-                    <p class="text-lg text-gray-600 mb-8">Transforming complex data into actionable insights to drive strategic business decisions.</p>
+                    <h2 class="text-2xl md:text-3xl text-gray-700 dark:text-gray-300 mb-6">Data Scientist & Researcher</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">Transforming complex data into actionable insights to drive strategic business decisions.</p>
                     <div class="flex space-x-4">
-                        <a href="#contact" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg shadow-md hover:shadow-lg transition">Contact Me</a>
-                        <a href="#about" class="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition">Learn More</a>
+                        <a href="#contact" class="px-6 py-3 gradient-bg text-white rounded-lg shadow-md hover:shadow-lg transition transform hover:-translate-y-1">Contact Me</a>
+                        <a href="#about" class="px-6 py-3 border border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition transform hover:-translate-y-1">Learn More</a>
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
-                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
-                        <!-- Updated image -->
-                        <img src="21.jpg" alt="Andrews Kwakye" class="w-full h-full object-cover">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl floating">
+                        <img src="21.jpg" alt="Andrews Kwakye" class="w-full h-full object-cover" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -96,101 +275,102 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
+    <section id="about" class="py-16 bg-white dark:bg-gray-900">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-12 section-title" data-aos="fade-up">Profile Summary</h2>
-            <div class="bg-gray-50 rounded-xl p-8 shadow-sm" data-aos="fade-up" data-aos-delay="100">
-                <p class="text-lg text-gray-700 mb-6">
+            <h2 class="text-3xl font-bold mb-12 section-title text-center" data-aos="fade-up">Profile Summary</h2>
+            <div class="bg-gradient-to-br from-blue-50/50 to-purple-50/50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-8 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
                     I am a data professional focused on analytics and data engineering with more than four years of experience across aircraft health management, retail, and the NHS. I turn complex data into clear insights that inform strategy and deliver measurable outcomes. I work confidently with technical and non technical stakeholders and I align data work with business goals.
                 </p>
-                <p class="text-lg text-gray-700 mb-6">
+                <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
                     My strengths include designing and operating data platforms and pipelines, shaping data models, and building trusted sources of truth with SQL and Python. I apply statistical analysis and machine learning with scikit learn, TensorFlow, Pandas, and NumPy, and I present results through Tableau, Power BI, and Excel with a strong focus on data quality and governance. I have introductory familiarity with Google BigQuery.
                 </p>
-                <p class="text-lg text-gray-700">
+                <p class="text-lg text-gray-700 dark:text-gray-300">
                     Recent work includes doctoral research at Cranfield University where I integrate digital twins to create a virtual aircraft, simulate platform level sensor behaviour, and develop classifiers and health indices for maintenance decision making. In an NHS care setting I delivered analytics for a London care provider, creating a secure data store, KPI dashboards, and predictive scheduling that improved resource allocation and care outcomes. I am committed to continuous learning and to delivering change at the intersection of business objectives, organisational transformation, and technology.
                 </p>
             </div>
         </div>
+        <div class="section-divider mt-16"></div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-16 bg-gray-50">
+    <section id="skills" class="py-16 bg-gray-50 dark:bg-gray-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-12 section-title" data-aos="fade-up">Core Competencies</h2>
+            <h2 class="text-3xl font-bold mb-12 section-title text-center" data-aos="fade-up">Core Competencies</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- (skills unchanged) -->
-            <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
-                <div class="flex items-center mb-4"><div class="p-3 rounded-lg bg-blue-100 text-blue-600 mr-4"><i data-feather="bar-chart-2"></i></div><h3 class="text-xl font-semibold">Business Intelligence & Visualization</h3></div>
+            <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center mb-4"><div class="p-3 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 mr-4"><i data-feather="bar-chart-2"></i></div><h3 class="text-xl font-semibold">Business Intelligence & Visualization</h3></div>
                 <div class="flex flex-wrap gap-2">
-                    <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Tableau</span>
-                    <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Power BI</span>
-                    <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Excel</span>
-                    <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Data Studio</span>
-                    <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Seaborn</span>
+                    <span class="skill-pill bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-3 py-1 rounded-full text-sm">Tableau</span>
+                    <span class="skill-pill bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-3 py-1 rounded-full text-sm">Power BI</span>
+                    <span class="skill-pill bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-3 py-1 rounded-full text-sm">Excel</span>
+                    <span class="skill-pill bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-3 py-1 rounded-full text-sm">Data Studio</span>
+                    <span class="skill-pill bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-3 py-1 rounded-full text-sm">Seaborn</span>
                 </div>
             </div>
-            <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
-                <div class="flex items-center mb-4"><div class="p-3 rounded-lg bg-purple-100 text-purple-600 mr-4"><i data-feather="cpu"></i></div><h3 class="text-xl font-semibold">Data & Statistical Analysis</h3></div>
+            <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center mb-4"><div class="p-3 rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 mr-4"><i data-feather="cpu"></i></div><h3 class="text-xl font-semibold">Data & Statistical Analysis</h3></div>
                 <div class="flex flex-wrap gap-2">
-                    <span class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Python</span>
-                    <span class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">R</span>
-                    <span class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Advanced Excel</span>
+                    <span class="skill-pill bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 px-3 py-1 rounded-full text-sm">Python</span>
+                    <span class="skill-pill bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 px-3 py-1 rounded-full text-sm">R</span>
+                    <span class="skill-pill bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 px-3 py-1 rounded-full text-sm">Advanced Excel</span>
                 </div>
             </div>
-            <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="300">
-                <div class="flex items-center mb-4"><div class="p-3 rounded-lg bg-green-100 text-green-600 mr-4"><i data-feather="database"></i></div><h3 class="text-xl font-semibold">Data Management</h3></div>
+            <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center mb-4"><div class="p-3 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 mr-4"><i data-feather="database"></i></div><h3 class="text-xl font-semibold">Data Management</h3></div>
                 <div class="flex flex-wrap gap-2">
-                    <span class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">SQL</span>
-                    <span class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">NoSQL</span>
-                    <span class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Amazon Redshift</span>
-                    <span class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Google Big Query</span>
+                    <span class="skill-pill bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-3 py-1 rounded-full text-sm">SQL</span>
+                    <span class="skill-pill bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-3 py-1 rounded-full text-sm">NoSQL</span>
+                    <span class="skill-pill bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-3 py-1 rounded-full text-sm">Amazon Redshift</span>
+                    <span class="skill-pill bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-3 py-1 rounded-full text-sm">Google BigQuery</span>
                 </div>
             </div>
-            <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
-                <div class="flex items-center mb-4"><div class="p-3 rounded-lg bg-yellow-100 text-yellow-600 mr-4"><i data-feather="activity"></i></div><h3 class="text-xl font-semibold">Predictive Modelling & ML</h3></div>
+            <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center mb-4"><div class="p-3 rounded-lg bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 mr-4"><i data-feather="activity"></i></div><h3 class="text-xl font-semibold">Predictive Modelling & ML</h3></div>
                 <div class="flex flex-wrap gap-2">
-                    <span class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Scikit-learn</span>
-                    <span class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">TensorFlow</span>
-                    <span class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Pandas</span>
-                    <span class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">NumPy</span>
-                    <span class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Keras</span>
+                    <span class="skill-pill bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 px-3 py-1 rounded-full text-sm">Scikit-learn</span>
+                    <span class="skill-pill bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 px-3 py-1 rounded-full text-sm">TensorFlow</span>
+                    <span class="skill-pill bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 px-3 py-1 rounded-full text-sm">Pandas</span>
+                    <span class="skill-pill bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 px-3 py-1 rounded-full text-sm">NumPy</span>
+                    <span class="skill-pill bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 px-3 py-1 rounded-full text-sm">Keras</span>
                 </div>
             </div>
-            <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
-                <div class="flex items-center mb-4"><div class="p-3 rounded-lg bg-red-100 text-red-600 mr-4"><i data-feather="box"></i></div><h3 class="text-xl font-semibold">Simulation & Digital Twins</h3></div>
+            <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center mb-4"><div class="p-3 rounded-lg bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 mr-4"><i data-feather="box"></i></div><h3 class="text-xl font-semibold">Simulation & Digital Twins</h3></div>
                 <div class="flex flex-wrap gap-2">
-                    <span class="skill-pill bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">MATLAB</span>
-                    <span class="skill-pill bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Simulink</span>
+                    <span class="skill-pill bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300 px-3 py-1 rounded-full text-sm">MATLAB</span>
+                    <span class="skill-pill bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300 px-3 py-1 rounded-full text-sm">Simulink</span>
                 </div>
             </div>
-            <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="300">
-                <div class="flex items-center mb-4"><div class="p-3 rounded-lg bg-indigo-100 text-indigo-600 mr-4"><i data-feather="clipboard"></i></div><h3 class="text-xl font-semibold">Project Management</h3></div>
+            <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center mb-4"><div class="p-3 rounded-lg bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 mr-4"><i data-feather="clipboard"></i></div><h3 class="text-xl font-semibold">Project Management</h3></div>
                 <div class="flex flex-wrap gap-2">
-                    <span class="skill-pill bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Jira</span>
-                    <span class="skill-pill bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Trello</span>
-                    <span class="skill-pill bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Agile</span>
-                    <span class="skill-pill bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Miro</span>
+                    <span class="skill-pill bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 px-3 py-1 rounded-full text-sm">Jira</span>
+                    <span class="skill-pill bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 px-3 py-1 rounded-full text-sm">Trello</span>
+                    <span class="skill-pill bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 px-3 py-1 rounded-full text-sm">Agile</span>
+                    <span class="skill-pill bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 px-3 py-1 rounded-full text-sm">Miro</span>
                 </div>
             </div>
         </div>
         </div>
+        <div class="section-divider mt-16"></div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-16 bg-white">
+    <section id="experience" class="py-16 bg-white dark:bg-gray-900">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-12 section-title" data-aos="fade-up">Professional Experience</h2>
+            <h2 class="text-3xl font-bold mb-12 section-title text-center" data-aos="fade-up">Professional Experience</h2>
             <div class="space-y-8">
                 <div class="timeline-item" data-aos="fade-up">
                     <div class="timeline-dot"></div>
-                    <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                    <div class="bg-gradient-to-br from-blue-50/50 to-purple-50/50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-6 shadow-sm card-hover">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
                             <h3 class="text-xl font-semibold">Doctoral Researcher</h3>
-                            <span class="text-blue-600 font-medium">June 2021 - Present</span>
+                            <span class="text-blue-600 dark:text-blue-400 font-medium">June 2021 - Present</span>
                         </div>
-                        <h4 class="text-lg text-gray-700 mb-2">Cranfield University, Integrated Vehicle Health Management (IVHM) Centre</h4>
-                        <p class="text-gray-600 mb-4">Research focus: Platform Aircraft Health Management Using AI</p>
-                        <p class="text-gray-700">
+                        <h4 class="text-lg text-gray-700 dark:text-gray-300 mb-2">Cranfield University, Integrated Vehicle Health Management (IVHM) Centre</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Research focus: Aircraft Health Management Using AI</p>
+                        <p class="text-gray-700 dark:text-gray-300">
                             This research explores an approach to Aircraft Health Management by utilizing sensor data collected at the platform level. It involves developing a "virtual aircraft" by integrating the Digital Twins of various aircraft systems in MATLAB to simulate flight over a defined flight profile, enabling data collection across the entire flight envelope. The collected data is then processed to design a classifier for identifying faults and their severities, along with the development of a health index to effectively monitor the behaviour of fault modes. This approach promises supply to maintenance information for aircraft health management without directly using the diagnostics of the aircraft systems.
                         </p>
                     </div>
@@ -198,13 +378,13 @@
 
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="timeline-dot"></div>
-                    <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                    <div class="bg-gradient-to-br from-blue-50/50 to-purple-50/50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-6 shadow-sm card-hover">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
                             <h3 class="text-xl font-semibold">Data Analyst</h3>
-                            <span class="text-blue-600 font-medium">October 2022 - Present</span>
+                            <span class="text-blue-600 dark:text-blue-400 font-medium">October 2022 - Present</span>
                         </div>
-                        <h4 class="text-lg text-gray-700 mb-2">Ebenezer Residential Care Home Ltd, London</h4>
-                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <h4 class="text-lg text-gray-700 dark:text-gray-300 mb-2">Ebenezer Residential Care Home Ltd, London</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
                             <li>Developed and optimized data-driven strategies and processes tailored to the care home's operational needs, creating Business Requirement Documents (BRD) and Functional Requirement Documents (FRD) for each project.</li>
                             <li>Identified key performance metrics and data sources to support decision-making in resident care, staff allocation, and resource management.</li>
                             <li>Designed, implemented, and managed an enterprise data storage and retrieval system, ensuring efficient and secure access to resident and operational data using SQL.</li>
@@ -216,13 +396,13 @@
 
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="timeline-dot"></div>
-                    <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                    <div class="bg-gradient-to-br from-blue-50/50 to-purple-50/50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-6 shadow-sm card-hover">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
                             <h3 class="text-xl font-semibold">IT Service Desk Personnel</h3>
-                            <span class="text-blue-600 font-medium">October 2020 - January 2021</span>
+                            <span class="text-blue-600 dark:text-blue-400 font-medium">October 2020 - January 2021</span>
                         </div>
-                        <h4 class="text-lg text-gray-700 mb-2">University of Portsmouth</h4>
-                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <h4 class="text-lg text-gray-700 dark:text-gray-300 mb-2">University of Portsmouth</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
                             <li>Provide efficient frontline IT support for on-site and remote students and staff.</li>
                             <li>Prioritize, monitor, and escalate incidents for timely resolution.</li>
                             <li>Assist with ICT, remote technology, and classroom/AV equipment.</li>
@@ -231,104 +411,107 @@
                 </div>
             </div>
         </div>
+        <div class="section-divider mt-16"></div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-16 bg-gray-50">
+    <section id="education" class="py-16 bg-gray-50 dark:bg-gray-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-12 section-title" data-aos="fade-up">Education</h2>
+            <h2 class="text-3xl font-bold mb-12 section-title text-center" data-aos="fade-up">Education</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up">
+                <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-sm card-hover" data-aos="fade-up">
                     <div class="flex items-center mb-4">
-                        <div class="p-3 rounded-lg bg-blue-100 text-blue-600 mr-4"><i data-feather="award"></i></div>
+                        <div class="p-3 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 mr-4"><i data-feather="award"></i></div>
                         <div>
                             <h3 class="text-xl font-semibold">PhD Transport Systems</h3>
-                            <p class="text-gray-600">Cranfield University</p>
-                            <p class="text-gray-500">2025</p>
+                            <p class="text-gray-600 dark:text-gray-400">Cranfield University</p>
+                            <p class="text-gray-500 dark:text-gray-500">2025</p>
                         </div>
                     </div>
                 </div>
-                <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-center mb-4">
-                        <div class="p-3 rounded-lg bg-purple-100 text-purple-600 mr-4"><i data-feather="award"></i></div>
+                        <div class="p-3 rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 mr-4"><i data-feather="award"></i></div>
                         <div>
                             <h3 class="text-xl font-semibold">MSc Data Analytics</h3>
-                            <p class="text-gray-600">University of Portsmouth</p>
-                            <p class="text-gray-500">2020</p>
+                            <p class="text-gray-600 dark:text-gray-400">University of Portsmouth</p>
+                            <p class="text-gray-500 dark:text-gray-500">2020</p>
                         </div>
                     </div>
                 </div>
-                <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex items-center mb-4">
-                        <div class="p-3 rounded-lg bg-green-100 text-green-600 mr-4"><i data-feather="award"></i></div>
+                        <div class="p-3 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 mr-4"><i data-feather="award"></i></div>
                         <div>
                             <h3 class="text-xl font-semibold">MBA Management Information Systems</h3>
-                            <p class="text-gray-600">Kwame Nkrumah University Of Science And Technology</p>
-                            <p class="text-gray-500">2018</p>
+                            <p class="text-gray-600 dark:text-gray-400">Kwame Nkrumah University Of Science And Technology</p>
+                            <p class="text-gray-500 dark:text-gray-500">2018</p>
                         </div>
                     </div>
                 </div>
-                <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="300">
                     <div class="flex items-center mb-4">
-                        <div class="p-3 rounded-lg bg-yellow-100 text-yellow-600 mr-4"><i data-feather="award"></i></div>
+                        <div class="p-3 rounded-lg bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 mr-4"><i data-feather="award"></i></div>
                         <div>
                             <h3 class="text-xl font-semibold">BA Sociology and Social Work</h3>
-                            <p class="text-gray-600">Kwame Nkrumah University Of Science And Technology</p>
-                            <p class="text-gray-500">2015</p>
+                            <p class="text-gray-600 dark:text-gray-400">Kwame Nkrumah University Of Science And Technology</p>
+                            <p class="text-gray-500 dark:text-gray-500">2015</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="section-divider mt-16"></div>
     </section>
 
     <!-- Certifications Section -->
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-white dark:bg-gray-900">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-12 section-title" data-aos="fade-up">Training & Certifications</h2>
+            <h2 class="text-3xl font-bold mb-12 section-title text-center" data-aos="fade-up">Training & Certifications</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-gray-50 rounded-xl p-6 shadow-sm" data-aos="fade-up">
+                <div class="bg-gradient-to-br from-blue-50/50 to-purple-50/50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-6 shadow-sm card-hover" data-aos="fade-up">
                     <div class="flex items-start">
-                        <div class="p-3 rounded-lg bg-blue-100 text-blue-600 mr-4"><i data-feather="file-text"></i></div>
+                        <div class="p-3 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 mr-4"><i data-feather="file-text"></i></div>
                         <div>
                             <h3 class="text-xl font-semibold mb-1">Business Intelligence Analyst</h3>
-                            <p class="text-gray-600">September 2020</p>
+                            <p class="text-gray-600 dark:text-gray-400">September 2020</p>
                         </div>
                     </div>
                 </div>
-                <div class="bg-gray-50 rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-gradient-to-br from-blue-50/50 to-purple-50/50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-6 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-start">
-                        <div class="p-3 rounded-lg bg-purple-100 text-purple-600 mr-4"><i data-feather="file-text"></i></div>
+                        <div class="p-3 rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 mr-4"><i data-feather="file-text"></i></div>
                         <div>
                             <h3 class="text-xl font-semibold mb-1">Google Cloud Platform Big Data and Machine Learning Fundamentals</h3>
-                            <p class="text-gray-600">December 2020</p>
+                            <p class="text-gray-600 dark:text-gray-400">December 2020</p>
                         </div>
                     </div>
                 </div>
-                <div class="bg-gray-50 rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-gradient-to-br from-blue-50/50 to-purple-50/50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-6 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex items-start">
-                        <div class="p-3 rounded-lg bg-green-100 text-green-600 mr-4"><i data-feather="file-text"></i></div>
+                        <div class="p-3 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 mr-4"><i data-feather="file-text"></i></div>
                         <div>
                             <h3 class="text-xl font-semibold mb-1">GDPR Data Protection Officer</h3>
-                            <p class="text-gray-600">June 2023</p>
+                            <p class="text-gray-600 dark:text-gray-400">June 2023</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="section-divider mt-16"></div>
     </section>
 
     <!-- Publications Section -->
-    <section id="publications" class="py-16 bg-gray-50">
+    <section id="publications" class="py-16 bg-gray-50 dark:bg-gray-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-12 section-title" data-aos="fade-up">Publications</h2>
+            <h2 class="text-3xl font-bold mb-12 section-title text-center" data-aos="fade-up">Publications</h2>
             <div class="space-y-6">
-                <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up">
+                <div class="bg-gradient-to-br from-blue-50/50 to-purple-50/50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-6 shadow-sm card-hover" data-aos="fade-up">
                     <div class="flex items-start">
-                        <div class="p-3 rounded-lg bg-blue-100 text-blue-600 mr-4"><i data-feather="book"></i></div>
+                        <div class="p-3 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 mr-4"><i data-feather="book"></i></div>
                         <div>
                             <h3 class="text-xl font-semibold mb-2">Platform health management for aircraft maintenance – A review</h3>
-                            <a href="https://journals.sagepub.com/doi/pdf/10.1177/09544100231219736" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline flex items-center">
+                            <a href="https://journals.sagepub.com/doi/pdf/10.1177/09544100231219736" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline flex items-center transition transform hover:-translate-y-1">
                                 <i data-feather="link" class="w-4 h-4 mr-2"></i>
                                 View Publication
                             </a>
@@ -336,12 +519,12 @@
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-gradient-to-br from-blue-50/50 to-purple-50/50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-6 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-start">
-                        <div class="p-3 rounded-lg bg-purple-100 text-purple-600 mr-4"><i data-feather="book"></i></div>
+                        <div class="p-3 rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 mr-4"><i data-feather="book"></i></div>
                         <div>
                             <h3 class="text-xl font-semibold mb-2">A Platform View of Aircraft Data Simulation and Analysis</h3>
-                            <a href="https://www.preprints.org/manuscript/202503.1945/v1" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline flex items-center">
+                            <a href="https://www.preprints.org/manuscript/202503.1945/v1" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline flex items-center transition transform hover:-translate-y-1">
                                 <i data-feather="link" class="w-4 h-4 mr-2"></i>
                                 View Publication
                             </a>
@@ -350,10 +533,11 @@
                 </div>
             </div>
         </div>
+        <div class="section-divider mt-16"></div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+    <section id="contact" class="py-16 gradient-bg text-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Get In Touch</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -387,15 +571,15 @@
                         <h4 class="font-medium mb-4">Connect with me</h4>
                         <div class="flex space-x-4">
                             <!-- LinkedIn -->
-                            <a href="https://www.linkedin.com/in/andrews-darfour-kwakye-747b85113/" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg bg-white bg-opacity-20 hover:bg-opacity-30 transition" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/in/andrews-darfour-kwakye-747b85113/" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg bg-white bg-opacity-20 hover:bg-opacity-30 transition transform hover:-translate-y-1" aria-label="LinkedIn">
                                 <i data-feather="linkedin"></i>
                             </a>
                             <!-- GitHub -->
-                            <a href="https://github.com/up939271" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg bg-white bg-opacity-20 hover:bg-opacity-30 transition" aria-label="GitHub">
+                            <a href="https://github.com/up939271" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg bg-white bg-opacity-20 hover:bg-opacity-30 transition transform hover:-translate-y-1" aria-label="GitHub">
                                 <i data-feather="github"></i>
                             </a>
                             <!-- Tableau Public (using a chart icon) -->
-                            <a href="https://public.tableau.com/app/profile/andrews.darfour.kwakye/vizzes" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg bg-white bg-opacity-20 hover:bg-opacity-30 transition" aria-label="Tableau Public">
+                            <a href="https://public.tableau.com/app/profile/andrews.darfour.kwakye/vizzes" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg bg-white bg-opacity-20 hover:bg-opacity-30 transition transform hover:-translate-y-1" aria-label="Tableau Public">
                                 <i data-feather="pie-chart"></i>
                             </a>
                         </div>
@@ -407,21 +591,21 @@
                     <form class="space-y-4">
                         <div>
                             <label for="name" class="block mb-1">Name</label>
-                            <input type="text" id="name" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 placeholder-white placeholder-opacity-70">
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:bg-white focus:bg-opacity-30 placeholder-white placeholder-opacity-70">
                         </div>
                         <div>
                             <label for="email" class="block mb-1">Email</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 placeholder-white placeholder-opacity-70">
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:bg-white focus:bg-opacity-30 placeholder-white placeholder-opacity-70">
                         </div>
                         <div>
                             <label for="subject" class="block mb-1">Subject</label>
-                            <input type="text" id="subject" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 placeholder-white placeholder-opacity-70">
+                            <input type="text" id="subject" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:bg-white focus:bg-opacity-30 placeholder-white placeholder-opacity-70">
                         </div>
                         <div>
                             <label for="message" class="block mb-1">Message</label>
-                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 placeholder-white placeholder-opacity-70"></textarea>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:bg-white focus:bg-opacity-30 placeholder-white placeholder-opacity-70"></textarea>
                         </div>
-                        <button type="submit" class="px-6 py-3 bg-white text-blue-600 rounded-lg font-medium hover:bg-opacity-90 transition">Send Message</button>
+                        <button type="submit" class="px-6 py-3 bg-white text-blue-600 rounded-lg font-medium hover:bg-opacity-90 transition transform hover:-translate-y-1">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -431,7 +615,7 @@
     <!-- Footer -->
     <footer class="py-8 bg-gray-900 text-gray-400">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p>© 2023 Andrews Kwakye. All rights reserved.</p>
+            <p>© <span id="current-year"></span> Andrews Kwakye. All rights reserved.</p>
         </div>
     </footer>
 
@@ -439,12 +623,62 @@
         // Initialize AOS animation
         AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
 
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Theme toggle functionality
+        const themeToggleBtns = document.querySelectorAll('#theme-toggle, #theme-toggle-mobile');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        const currentTheme = localStorage.getItem('theme');
+
+        // Set initial theme
+        if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+            document.body.classList.add('dark');
+        } else {
+            document.body.classList.remove('dark');
+        }
+
+        // Theme toggle event listeners
+        themeToggleBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.body.classList.toggle('dark');
+                localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+                feather.replace();
+            });
+        });
+
         // Mobile menu toggle
         document.getElementById('menu-toggle').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
             feather.replace();
         });
+
+        // Active section highlighting
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function highlightActiveSection() {
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 100)) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightActiveSection);
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -457,7 +691,6 @@
                     const mobileMenu = document.getElementById('mobile-menu');
                     if (!mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
-                        feather.replace();
                     }
                 }
             });
